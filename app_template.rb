@@ -36,11 +36,15 @@ gem_group :development do
 
   # Show Routing
   gem 'sextant'
+
+  # Show Errors
+  gem "better_errors"
+  gem "binding_of_caller"
 end
 
 # Test AND Development
 gem_group :development, :test do
-  gem 'sqlite3'
+  gem "sqlite3"
 end
 
 # Test
