@@ -104,7 +104,7 @@ insert_into_file "Gemfile",
 
 insert_into_file "Gemfile",
   "# Test AND Development\n",
-  before: "gem_group :development, :test do\n"
+  before: "group :development, :test do\n"
 
 insert_into_file "Gemfile",
   "# Test\n",
