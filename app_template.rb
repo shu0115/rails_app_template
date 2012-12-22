@@ -55,8 +55,7 @@ comment_lines 'Gemfile', "gem 'sqlite3'"
 comment_lines 'Gemfile', "gem 'action_args'"
 
 # Ruby Version Insert
-insert_into_file
-  "Gemfile",
+insert_into_file "Gemfile",
   "source \"https://rubygems.org\"\n",
   after: "ruby \"1.9.3\"\n"
 
