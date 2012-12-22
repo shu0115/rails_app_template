@@ -60,4 +60,4 @@ insert_into_file "Gemfile",
   after: "ruby \"1.9.3\"\n"
 
 # Gem Install
-run "bundle install"
+run "bundle install --without production"
