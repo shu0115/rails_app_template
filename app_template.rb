@@ -29,6 +29,9 @@ gem 'rainbow'
 # Dubug Tool
 gem 'tapp'
 
+# Exception Error Notice
+gem "exception_notification"
+
 # Development
 gem_group :development do
   # Twitter Bootstrap
@@ -103,6 +106,10 @@ insert_into_file "Gemfile",
   before: "gem \"tapp\"\n"
 
 insert_into_file "Gemfile",
+  "\n# Exception Error Notice\n",
+  before: "gem \"exception_notification\"\n"
+
+insert_into_file "Gemfile",
   "\n# Development\n",
   before: "group :development do\n"
 
@@ -124,3 +131,4 @@ comment_lines 'Gemfile', "gem \"action_args\""
 
 # Gem Install
 run "bundle install --without production"
+run "bundle update"
