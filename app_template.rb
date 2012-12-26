@@ -32,6 +32,9 @@ gem 'tapp'
 # Exception Error Notice
 gem "exception_notification"
 
+# Translation
+gem 'i18n_generators'
+
 # Development
 gem_group :development do
   # Twitter Bootstrap
@@ -106,8 +109,12 @@ insert_into_file "Gemfile",
   before: "gem \"tapp\"\n"
 
 insert_into_file "Gemfile",
-  "\n# Exception Error Notice\n",
+  "\n# Translation\n",
   before: "gem \"exception_notification\"\n"
+
+insert_into_file "Gemfile",
+  "\n# Exception Error Notice\n",
+  before: "gem \"i18n_generators\"\n"
 
 insert_into_file "Gemfile",
   "\n# Development\n",
