@@ -46,6 +46,9 @@ gem_group :development do
   # Show Errors
   gem "better_errors"
   gem "binding_of_caller"
+
+  # Show Request
+  gem 'meta_request', '0.2.0'
 end
 
 # Test AND Development
