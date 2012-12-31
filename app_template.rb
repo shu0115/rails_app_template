@@ -135,6 +135,30 @@ insert_into_file "Gemfile",
   "# Production\n",
   before: "group :production do\n"
 
+content = "\n"
+content += "  # メールテスト用\n"
+content += "  config.action_mailer.delivery_method = :smtp\n"
+content += "  config.action_mailer.raise_delivery_errors = true\n"
+content += "  config.action_mailer.smtp_settings = {\n"
+content += "    address:              "smtp.gmail.com",\n"
+content += "    port:                 587,\n"
+content += "    user_name:            "rails.dev0115@gmail.com",\n"
+content += "    password:             Settings.mail_password,\n"
+content += "    authentication:       'plain',\n"
+content += "    enable_starttls_auto: true,\n"
+content += "  }\n"
+content += "\n"
+content += "  # エラー通知\n"
+content += "  Rails.application.config.middleware.use(\n"
+content += "    ExceptionNotifier,\n"
+content += "    email_prefix:         "[#{Rails.env}][#{Settings.app_name}] ",\n"
+content += "    sender_address:       "rails.dev0115@gmail.com",\n"
+content += "    exception_recipients: [ "rails.dev0115@gmail.com" ]\n"
+content += "  )\n"
+insert_into_file "config/environments/production.rb",
+  content.force_encoding('ASCII-8BIT'),
+  before: "end"
+
 # CommentOut
 comment_lines 'Gemfile', "gem 'sqlite3'"
 comment_lines 'Gemfile', "gem \"action_args\""
