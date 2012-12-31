@@ -29,11 +29,11 @@ gem 'rainbow'
 # Dubug Tool
 gem 'tapp'
 
-# Exception Error Notice
-gem "exception_notification"
-
 # Translation
 gem 'i18n_generators'
+
+# Exception Error Notice
+gem "exception_notification"
 
 # Development
 gem_group :development do
@@ -113,11 +113,11 @@ insert_into_file "Gemfile",
 
 insert_into_file "Gemfile",
   "\n# Translation\n",
-  before: "gem \"exception_notification\"\n"
+  before: "gem \"i18n_generators\"\n"
 
 insert_into_file "Gemfile",
   "\n# Exception Error Notice\n",
-  before: "gem \"i18n_generators\"\n"
+  before: "gem \"exception_notification\"\n"
 
 insert_into_file "Gemfile",
   "\n# Development\n",
