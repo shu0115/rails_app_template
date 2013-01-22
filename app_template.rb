@@ -49,6 +49,9 @@ gem_group :development do
 
   # Show Request
   gem 'meta_request', '0.2.0'
+
+  # Ensure Certificate
+  gem "certified"
 end
 
 # Test AND Development
