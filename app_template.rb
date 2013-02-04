@@ -29,6 +29,7 @@ gem 'rainbow'
 
 # Dubug Tool
 gem 'tapp'
+gem 'awesome_print'
 
 # Translation
 gem 'i18n_generators'
