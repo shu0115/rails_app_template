@@ -168,7 +168,6 @@ insert_into_file "config/environments/production.rb",
 
 # CommentOut
 comment_lines 'Gemfile', "gem 'sqlite3'"
-comment_lines 'Gemfile', "gem \"action_args\""
 
 # Gem Install
 run "bundle install --without production"
