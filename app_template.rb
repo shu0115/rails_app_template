@@ -13,6 +13,7 @@ gem 'markdown-scaffold'
 
 # Utility
 gem 'action_args'
+gem 'html5_validators'
 
 # App Server
 gem 'thin'
@@ -52,6 +53,9 @@ gem_group :development do
 
   # Ensure Certificate
   gem "certified"
+
+  # Helpful rake tasks for Heroku
+  gem "heroku_san"
 end
 
 # Test AND Development
@@ -169,3 +173,6 @@ comment_lines 'Gemfile', "gem \"action_args\""
 # Gem Install
 run "bundle install --without production"
 run "bundle update"
+
+# Generate Command
+run "rails generate heroku_san"
