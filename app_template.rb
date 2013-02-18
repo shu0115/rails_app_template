@@ -52,7 +52,7 @@ gem_group :development do
   # Show Request
   gem 'meta_request', '0.2.0'
 
-  # Ensure Certificate
+  # SSL certificates
   gem "certified"
 
   # Helpful rake tasks for Heroku
