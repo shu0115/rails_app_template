@@ -57,6 +57,9 @@ gem_group :development do
 
   # Helpful rake tasks for Heroku
   gem "heroku_san"
+
+  # Best Practice
+  gem "rails_best_practices"
 end
 
 # Test AND Development
