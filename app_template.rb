@@ -1,68 +1,33 @@
-#----------------------#
-# Application Template #
-#----------------------#
-
-# OmniAuth
+# インストールGem
 gem 'omniauth-scaffold'
-
-# Scaffold Template
 gem 'custom-template'
-
-# Markdown
 gem 'markdown-scaffold'
-
-# Utility
 gem 'action_args'
 gem 'html5_validators'
-
-# App Server
 gem 'thin'
-
-# Pagination
+gem 'puma'
 gem 'kaminari'
-
-# Settings
 gem 'rails_config'
-
-# Colorful Logging(ANSI color)
 gem 'rainbow'
-
-# Dubug Tool
 gem 'tapp'
 gem 'awesome_print'
-
-# Translation
 gem 'i18n_generators'
-
-# Exception Error Notice
 gem "exception_notification"
 
 # Development
 gem_group :development do
-  # Twitter Bootstrap
   gem 'twitter-bootstrap-scaffold'
-
-  # Show Routing
   gem 'sextant'
-
-  # Show Errors
   gem "better_errors"
   gem "binding_of_caller"
-
-  # Show Request
   gem 'meta_request', '0.2.0'
-
-  # SSL certificates
   gem "certified"
-
-  # Helpful rake tasks for Heroku
   gem "heroku_san"
-
-  # Best Practice
   gem "rails_best_practices"
+  gem 'pry-rails'
 end
 
-# Test AND Development
+# Development AND Test
 gem_group :development, :test do
   gem "sqlite3"
 end
@@ -78,12 +43,11 @@ gem_group :production do
   gem 'newrelic_rpm'
 end
 
-#--------------#
-# Insert Files #
-#--------------#
+# ファイル内挿入
 # Ruby Version Insert
 insert_into_file "Gemfile",
-  "ruby '1.9.3'\n",
+#  "ruby '1.9.3'\n",
+  "ruby '2.0.0'\n",
   after: "source 'https://rubygems.org'\n"
 
 insert_into_file "Gemfile",
