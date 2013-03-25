@@ -30,10 +30,6 @@ end
 # Development AND Test
 gem_group :development, :test do
   gem "sqlite3"
-end
-
-# Test
-gem_group :test do
   gem 'rspec-rails'
 end
 
@@ -143,3 +139,4 @@ run "bundle update"
 
 # Generate Command
 run "rails generate heroku_san"
+run "rails generate rspec:install"
